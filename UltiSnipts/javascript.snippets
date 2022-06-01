@@ -1,0 +1,127 @@
+global !p
+def capitalize_first(word):
+	if(word):
+		word = word[0].upper() + word[1:]
+	return word
+endglobal
+
+snippet clg "console.log"
+console.log($0);
+endsnippet
+
+snippet "JSON" "JSON.stringify" r
+JSON.stringify($0);
+endsnippet
+
+snippet "if ?\(?err?\)" "if err throw" r
+if (err) throw err;
+endsnippet
+
+snippet "if ?el?s?e?" "if else" r
+if ($1) {
+  $2
+} else {
+  $3
+}
+endsnippet
+
+snippet "try" "try catch" r
+try {
+  $1
+} catch (err) {
+  throw err;
+}
+endsnippet
+
+# React
+
+snippet "<>" "React.Fragment" r
+<>
+  $1
+</>
+endsnippet
+
+snippet "use[eE]f?f?e?c?t?" "useEffect" r
+useEffect(() => {
+  $1
+}, [$2]);
+endsnippet
+
+snippet "use[sS]t?a?t?e?" "useState" r
+const [${1}, set${2} = useState(${3});
+endsnippet
+
+snippet "rafc" "react component" r
+import React from 'react'
+
+export const $1 = () => {
+  return (
+    $0
+  );
+}
+endsnippet
+
+# Import and require
+
+snippet mod "module.exports"
+module.exports = $0;
+endsnippet
+
+snippet "requ?i?r?e?" "require" r
+const `!p
+def formatVariableName(path):
+	lastPart = path.split('/')[-1]
+	lastPart = re.sub(r'[_\-]', '', lastPart)
+	lastPart = re.sub(r'\.jsx?$', '', lastPart)
+	if lastPart == 'underscore':
+		return '_'
+	elif lastPart == 'jquery':
+		return '$'
+	else:
+		return lastPart
+snip.rv = formatVariableName(t[1])
+` = require('${1}')$0;
+endsnippet
+
+snippet "impo?r?t?" "import" r
+import `!p
+def formatVariableName(path):
+	lastPart = path.split('/')[-1]
+	lastPart = re.sub(r'[_\-]', '', lastPart)
+	lastPart = re.sub(r'\.jsx?$', '', lastPart)
+	if lastPart == 'underscore':
+		return '_'
+	elif lastPart == 'jquery':
+		return '$'
+	else:
+		return lastPart
+snip.rv = formatVariableName(t[1])
+` from '${1}'$0;
+endsnippet
+
+snippet imr "import React from 'react'"
+import React from 'react';
+endsnippet
+
+snippet imrd "import ReactDOM from 'react-dom'"
+import ReactDOM from 'react-dom';
+endsnippet
+
+#tests
+snippet it "it('', () => {})" b
+it('$1', () => {
+  $2
+})
+endsnippet
+
+snippet test "test('', () => {})" b
+test('$1', () => {
+  $2
+})
+endsnippet
+
+snippet desc "describe('', () => {})" b
+describe('$1', () => {
+  $2
+})
+endsnippet
