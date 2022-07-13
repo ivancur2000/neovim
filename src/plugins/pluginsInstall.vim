@@ -1,4 +1,4 @@
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 "scheme coolor  
 Plug 'joshdick/onedark.vim' 
