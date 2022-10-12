@@ -59,5 +59,6 @@ Plug 'tpope/vim-rhubarb'
 "auto complete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-syntastic/syntastic'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()

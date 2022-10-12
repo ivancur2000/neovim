@@ -1,13 +1,11 @@
 "scheme
-" colorscheme onedark
-" colorscheme nord
-colorscheme gruvbox
-let g:gruvbox_contrast_dark="soft"
-" hi! Normal ctermbg=NONE guibg=NONE 
+colorscheme onedark
+" highlight Normal ctermbg=none guibg=none
+" highlight NonText ctermbg=none guibg=none
 "easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
 "vim-jsx-pretty
-let g:vim_jsx_pretty_template_tags=['html', 'js', 'jsx', 'ts', 'tsx']
+let g:vim_jsx_pretty_template_tags=['html', 'js', 'jsx', 'ts', 'tsx', 'php']
 "nerdtree
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeFind<CR>
@@ -21,7 +19,7 @@ let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|' 
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
-let g:airline_theme='gruvbox' 
+let g:airline_theme='onedark' 
 "emmet
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
@@ -75,7 +73,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nmap <F2> <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-"syntastic
+"syntasti
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -97,3 +95,15 @@ let g:vcool_ins_rgba_map = '<Leader>ba'
 nmap <C-i> :Prettier<CR>
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
+" floaterm 
+let g:floaterm_gitcommit='floaterm'
+let g:floaterm_autoinsert=1
+let g:floaterm_width=0.8
+let g:floaterm_height=0.8
+let g:floaterm_wintitle=0
+let g:floaterm_autoclose=1
+
+let g:floaterm_keymap_toggle = '<F3>'
+let g:floaterm_keymap_next   = '<F5>;'
+let g:floaterm_keymap_prev   = '<F6>'
+let g:floaterm_keymap_new    = '<F4>'
