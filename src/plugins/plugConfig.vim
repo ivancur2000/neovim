@@ -1,7 +1,7 @@
 "scheme
 colorscheme onedark
-" highlight Normal ctermbg=none guibg=none
-" highlight NonText ctermbg=none guibg=none
+highlight Normal ctermbg=none guibg=none
+highlight NonText ctermbg=none guibg=none
 "easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
 "vim-jsx-pretty
